@@ -26,7 +26,9 @@ const Timeline = () => {
   const carouselRef = useRef();
 
   const scroll = (node, left) => {
-    return node.scrollTo({ left, behavior: "smooth" });
+    if (node && node.scrollTo) {
+      return node.scrollTo({ left, behavior: "smooth" });
+    }
   };
 
   const handleClick = (e, i) => {

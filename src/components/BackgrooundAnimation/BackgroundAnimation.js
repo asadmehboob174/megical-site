@@ -1,7 +1,7 @@
 import React from "react";
 
-const BackgroundAnimation = () => (
-  <div style={{ marginLeft: "100px" }}>
+const BackgroundAnimation = ({ marginLeft }) => (
+  <div style={marginLeft ? { marginLeft: "50px" } : { marginLeft: "100px" }}>
     <img
       className=""
       src="/images/bibi.jpeg" // Replace with the path to your image file within the public folder
